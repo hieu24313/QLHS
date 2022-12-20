@@ -1,0 +1,44 @@
+<head>
+    <link href="{{ url_for('static', filename='css/nv.css') }}" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='css/gv.css') }}" rel="stylesheet"/>
+</head>
+
+
+{% extends 'layout/base.html' %}
+{% block banner%}
+    <h1>Quản lý điểm</h1>
+{%endblock%}
+{% block content %}
+{% if current_user.is_authenticated %}
+
+<section>
+    <div class="back">
+        <a href="/">
+            <i class="fa-solid fa-backward"></i>
+        </a>
+    </div>
+    <div class="flex_content">
+        <div class="flex">
+            <i class="fa-solid fa-address-book"></i> <br>
+            <p>Xem bảng điểm</p>
+            <a href="/GV/bangDiem"><i class="fa-solid fa-caret-right" style="color:black"></i></a>
+        </div>
+        <div class="flex">
+            <i class="fa-solid fa-star"></i> <br>
+            <p>Nhập điểm</p>
+            <a href="/GV/nhapDiem"><i class="fa-solid fa-caret-right" style="color:black"></i></a>
+
+        </div>
+        <div class="flex">
+            <i class="fa-sharp fa-solid fa-pen-to-square"></i><br>
+            <p>Cập nhật điểm</p>
+            <a href="/GV/capNhatDiem"><i class="fa-solid fa-caret-right" style="color:black"></i></a>
+
+        </div>
+    </div>
+</section>
+
+{% else %}
+<h1>Bạn chưa đăng nhập, vui lòng đăng nhập <a href="/login">Tại đây</a></h1>
+{% endif %}
+{% endblock %}

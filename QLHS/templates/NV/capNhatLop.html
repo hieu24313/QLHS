@@ -1,0 +1,99 @@
+<head>
+    <link href="{{ url_for('static', filename='css/hs/capNhatLop.css') }}" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='css/hs/themHS.css') }}" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet"/>
+</head>
+{% extends 'layout/base.html' %}
+
+{% block banner%}
+<h1>Cập nhật danh sách lớp</h1>
+{%endblock%}
+
+{% block content %}
+<section >
+    <div class="back">
+        <a href="/NV">
+            <i class="fa-solid fa-backward"></i>
+        </a>
+    </div>
+    <div class="menu">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="/NV/capNhatLop">Danh sách lớp</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/NV/themHS">Thêm học sinh</a>
+            </li>
+        </ul>
+    </div>
+
+    <form method="post">
+        <div class="items">
+            <select class="option" required>
+                <option value="Khoi">Khối</option>
+                <option value="2">10</option>
+                <option value="3">11</option>
+                <option value="4">12</option>
+            </select>
+        </div>
+        <div class="items">
+            <select class="option" id="lop" required>
+                <option value="Lop">Lớp</option>
+                {% for l in lop %}
+                <option value="l.id">{{ l.tenlop }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="items">
+            <select class="option" id="hocky" required>
+                <option value="HK">Học kì</option>
+                <option value="2">1</option>
+                <option value="3">2</option>
+            </select>
+        </div>
+        <div class="items">
+            <label>Năm học: </label>
+            <input type="date" id="date" name="date" required>
+        </div>
+        <div class="items">
+            <input type="submit" id="loc" value="Lọc" name="lọc"/>
+        </div>
+
+    </form>
+
+    <table>
+        <!--    hàng 1-->
+        <tr>
+            <th style="width:100px">MSHS</th>
+            <th>Họ và tên</th>
+            <th>Ngày sinh</th>
+            <th>Giới tính</th>
+            <th>Địa chỉ</th>
+            <th>Email</th>
+<!--            <th>Thay đổi</th>-->
+            <th>Xóa</th>
+        </tr>
+        <!--    hàng 2-->
+        {% for l in load_hocsinh %}
+
+        <tr>
+            <td>HS{{ l[0] }}</td>
+            <td>{{ l[1] }}</td>
+            <td>{{ l[2] }}</td>
+            <td>{{ l[3] }}</td>
+            <td>{{ l[4] }}</td>
+            <td>{{ l[5] }}</td>
+<!--            <td>-->
+<!--                <span><i class="fa-solid fa-pen-to-square"></i></span>-->
+<!--            </td>-->
+            <td>
+                <span><i class="fa-solid fa-trash" method="delete"></i></span>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <div class="update ud" >
+        <input type="button" id="save" value="Lưu" name="Lưu" style="background-color:#6666ff; border: none"/>
+    </div>
+</section>
+{% endblock %}

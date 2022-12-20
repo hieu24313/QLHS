@@ -1,0 +1,122 @@
+<head>
+    <link href="{{ url_for('static', filename='css/diem/nhapDiem.css') }}" rel="stylesheet"/>
+</head>
+{% extends 'layout/base.html' %}
+
+{% block banner%}
+<h1>Nhập điểm</h1>
+{%endblock%}
+
+{% block content %}
+<section style="height: 500px">
+    <div class="back">
+        <a href="/GV">
+            <i class="fa-solid fa-backward"></i>
+        </a>
+    </div>
+
+    <form>
+        <div class="items">
+            <select class="option">
+                <option value="Khoi">Khối</option>
+                <option value="2">10</option>
+                <option value="3">11</option>
+                <option value="4">12</option>
+            </select>
+        </div>
+        <div class="items">
+            <select class="option">
+                <option value="Lop">Lớp</option>
+                <option value="2">A1</option>
+                <option value="3">A2</option>
+                <option value="4">A3</option>
+            </select>
+        </div>
+        <div class="items">
+            <select class="option">
+                <option value="HK">Học kì</option>
+                <option value="2">1</option>
+                <option value="3">2</option>
+            </select>
+        </div>
+        <div class="items">
+            <select class="option">
+                <option value="Mon">Môn học</option>
+                <option value="1">Toán</option>
+                <option value="2">Văn</option>
+            </select>
+        </div>
+        <div class="items">
+            <label>Năm học: </label>
+            <input type="date" id="date">
+            <label>Sĩ số: </label>
+        </div>
+        <div class="items">
+            <input type="submit" value="Lọc" id="loc"/>
+        </div>
+    </form>
+
+    <table>
+        <!--    hàng 1-->
+        <tr>
+            <th rowspan="2" style="width:150px">Mã số HS</th>
+            <th rowspan="2">Họ và tên</th>
+            <td colspan="3">Điểm 15'</td>
+            <td colspan="3">Điểm 45'</td>
+            <td rowspan="2">Điểm thi</td>
+            <th rowspan="2">Thay đổi</th>
+            <th rowspan="2">Xóa</th>
+        </tr>
+        <!--    hàng 2-->
+        <tr>
+
+            <td>Lần 1</td>
+            <td>Lần 2</td>
+            <td>Lần 3</td>
+            <td>Lần 1</td>
+            <td>Lần 2</td>
+            <td>Lần 3</td>
+        </tr>
+
+        <!--    hàng 3-->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <span><i class="fa-solid fa-pen-to-square"></i></span>
+            </td>
+            <td>
+                <span><i class="fa-solid fa-trash"></i></span>
+            </td>
+        </tr>
+        <!--    hàng 4-->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <span><i class="fa-solid fa-pen-to-square"></i></span>
+            </td>
+            <td>
+                <span><i class="fa-solid fa-trash"></i></span>
+            </td>
+        </tr>
+    </table>
+    <div>
+        <input type="submit" value="Lưu" class="luu"/>
+    </div>
+</section>
+{% endblock %}

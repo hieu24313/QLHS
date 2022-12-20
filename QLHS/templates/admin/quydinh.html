@@ -1,0 +1,38 @@
+<head>
+    <link href="{{ url_for('static', filename='css/login.css') }}" rel="stylesheet"/>
+</head>
+{% extends 'admin/master.html' %}
+
+{% block banner%}
+{%endblock%}
+{% block body %}
+{% if msgerr %}
+<div class="alert alert-danger">
+    {{msgerr}}
+</div>
+{% endif %}
+<h1 class="text-center text-info">THAY ĐỔI QUY ĐINH</h1>
+
+<form method="post" enctype="multipart/form-data" >
+    <div class="form-floating mb-3 mt-3">
+        <label for="tuoimin">Tuổi tối thiểu </label>
+        <input type="number" class="form-control" id="tuoimin" required
+               value="{{ quydinh.tuoimin }}" name="tuoimin">
+
+    </div>
+    <div class="form-floating mb-3 mt-3">
+        <label for="tuoimax">Tuổi tối đa</label>
+        <input type="number" class="form-control" id="tuoimax" required
+               value="{{ quydinh.tuoimax }}" name="tuoimax">
+
+    </div>
+    <div class="form-floating mb-3 mt-3">
+        <label for="siso">Sĩ Số Tối Đa</label>
+        <input type="number" class="form-control" id="siso" required
+               value="{{ quydinh.siso }}" name="siso">
+    </div>
+    <div>
+        <input type="submit" value="Xác nhận" class="btn btn-success" />
+    </div>
+</form>
+{% endblock %}

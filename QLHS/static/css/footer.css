@@ -1,0 +1,13 @@
+footer {
+    clear: both;
+}
+
+div#footer div.fLeft {
+    float: left;
+    width: 340px;
+}
+
+div#footer div.fRight {
+    float: right;
+    width: 50px;
+}

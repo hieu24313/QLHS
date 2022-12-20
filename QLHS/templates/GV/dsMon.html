@@ -1,0 +1,75 @@
+<link href="{{ url_for('static', filename='css/capNhatMon.css') }}" rel="stylesheet"/>
+<link href="{{ url_for('static', filename='css/dsMon.css') }}" rel="stylesheet"/>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet"/>
+{% extends 'layout/base.html' %}
+
+{% block content %}
+
+<section>
+    <h1>Danh sách môn học</h1>
+    <div class="update">
+        <div class="update ud">
+            <select class="option">
+                <option value="Lop">Lớp</option>
+                <option value="2">A1</option>
+                <option value="3">A2</option>
+                <option value="4">A3</option>
+            </select>
+        </div>
+        <div class="update ud">
+            <select class="option">
+                <option value="HK">Học kì</option>
+                <option value="2">1</option>
+                <option value="3">2</option>
+            </select>
+        </div>
+        <div class="update ud">
+            <select class="option">
+                <option value="NH">Năm học</option>
+                <option value="2">1</option>
+                <option value="3">2</option>
+            </select>
+        </div>
+        <div class="update ud">
+            <input type="button" id="loc" value="Lọc" name="lọc"/>
+        </div>
+    </div>
+    <form>
+        <input type="search" id="search" placeholder="Nhập tên môn" name="search">
+        <span>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </span>
+    </form>
+    <table>
+        <!--    hàng 1-->
+        <tr>
+            <th>STT</th>
+            <th>Tên môn</th>
+            <th>Mã môn</th>
+        </tr>
+        <!--    hàng 2-->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <!--    hàng 3-->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!--    hàng 4-->
+        <tr>
+
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+    </table>
+</section>
+
+{% endblock %}

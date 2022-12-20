@@ -1,0 +1,90 @@
+<link href="{{ url_for('static', filename='css/hs/tiepNhanHS.css') }}" rel="stylesheet"/>
+
+{% extends 'layout/base.html' %}
+
+{% block banner%}
+    <h1>Tiếp nhận học sinh</h1>
+{%endblock%}
+
+{% block content %}
+
+<body>
+{% if msgbox %}
+<h1 class="text-danger text-align: center;"> {{ msgbox }}, tuổi hợp lệ từ {{ b }} đến {{ c }}</h1>
+{% endif %}
+
+<section style="height: 600px">
+    <div class="back">
+        <a href="/NV">
+            <i class="fa-solid fa-backward"></i>
+        </a>
+    </div>
+    <h4>Thông tin học sinh</h4>
+    <form method="post">
+        <div class="form">
+            <input type="text" id="username" name="username" placeholder="Họ và tên học sinh" required>
+        </div>
+        <div class="form">
+            <label for="birthday">Ngày sinh: </label>
+            <input id="birthday" type="date" name="birthday" required>
+        </div>
+        <div class="form">
+            <input type="text" id="address" name="address" placeholder="Địa chỉ" required>
+        </div>
+        <div class="form">
+            <input type="text" id="sex" name="sex" placeholder="Giới tính" required>
+        </div>
+        <div class="form">
+            <input type="email" id="email" name="email" placeholder="Email">
+        </div>
+        <div class="form">
+            <input type="tel" id="phone" name="phone" placeholder="Điện thoại">
+        </div>
+        <div>
+            <input type="submit" value="Thêm" class="btn them"/>
+        </div>
+    </form>
+
+
+    <table>
+        <tr>
+            <th style="width:100px">MSHS</th>
+            <th>Họ và tên</th>
+            <th>Ngày sinh</th>
+            <th>Giới tính</th>
+            <th>Địa chỉ</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <div>
+        <input type="button" value="Lưu" class="btn luu"/>
+    </div>
+
+</section>
+</body>
+
+{% endblock %}

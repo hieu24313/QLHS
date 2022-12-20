@@ -1,0 +1,35 @@
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  padding-left: 10%;
+ }
+.inform{
+    width: 50%
+}
+select.option {
+    width: 49%;
+    height: 35px;
+}
+.form-control {
+    display: block;
+    width: 95%;
+    height: 25px;
+    padding: 5px 10px;
+    margin: 10px 0;
+}
+.show {
+    text-align: center;
+    margin: 0px auto;
+    padding: 30px;
+}
+table {
+    margin:40px 0 0 10%;
+    text-align: center;
+    width:80%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th,td {
+    border-style: solid;
+    height: 35px;
+}

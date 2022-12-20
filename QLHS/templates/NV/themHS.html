@@ -1,0 +1,58 @@
+<head>
+    <link href="{{ url_for('static', filename='css/hs/capNhatLop.css') }}" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='css/hs/themHS.css') }}" rel="stylesheet"/>
+</head>
+{% extends 'layout/base.html' %}
+
+{% block banner%}
+    <h1>Thêm học sinh</h1>
+{%endblock%}
+
+{% block content %}
+{% if msgbox %}
+<h1 class="text-danger"> {{ msgbox }}, tuổi hợp lệ từ {{ b }} đến {{ c }}</h1>
+{% endif %}
+<section style="height:500px">
+    <div class="back">
+        <a href="/NV">
+            <i class="fa-solid fa-backward"></i>
+        </a>
+    </div>
+
+    <div class="menu" >
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" href="/NV/capNhatLop">Danh sách lớp</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="/NV/themHS">Thêm học sinh</a>
+            </li>
+        </ul>
+    </div>
+
+    <form method="post">
+        <div class="form">
+            <input type="text" id="username" name="username" placeholder="Họ và tên học sinh">
+        </div>
+        <div class="form">
+            <label for="birthday">Ngày sinh: </label>
+            <input id="birthday" type="date" name="birthday">
+        </div>
+        <div class="form">
+            <input type="text" id="address" name="address" placeholder="Địa chỉ">
+        </div>
+        <div class="form">
+            <input type="text" id="sex" name="sex" placeholder="Giới tính">
+        </div>
+        <div class="form">
+            <input type="email" id="email" name="email" placeholder="Email">
+        </div>
+        <div class="form">
+            <input type="tel" id="phone" name="phone" placeholder="Điện thoại">
+        </div>
+        <div>
+            <input type="submit" value="Thêm" class="them"/>
+        </div>
+    </form>
+</section>
+{% endblock %}

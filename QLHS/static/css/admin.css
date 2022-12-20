@@ -1,0 +1,20 @@
+
+    .form {
+    width: 70%;
+    height: 100px;
+    text-align: center;
+    display:flex;
+    flex-wrap: wrap;
+    }
+    .items {
+        width:45%;
+            padding: 10px;
+    }
+    .items img{
+        width:100%;
+            margin-left: 20px;
+    }
+    .items h3 {
+    text-align: left;
+    margin: 50px;
+}

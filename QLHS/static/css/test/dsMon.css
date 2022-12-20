@@ -1,0 +1,8 @@
+.update .ud {
+    width: 23%;
+    margin: 10px;
+}
+.update .ud input {
+    background-color: green;
+    border: none;
+}

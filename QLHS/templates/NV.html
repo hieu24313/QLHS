@@ -1,0 +1,40 @@
+<title>
+    {% block title %}Education Website{% endblock %}
+</title>
+
+<link href="{{ url_for('static', filename='css/nv.css') }}" rel="stylesheet"/>
+
+
+{% extends 'layout/base.html' %}
+{% block banner%}
+    <h1>Quản lý học sinh</h1>
+{%endblock%}
+{% block content %}
+{% if current_user.is_authenticated %}
+
+
+<section>
+    <div class="back">
+        <a href="/">
+            <i class="fa-solid fa-backward"></i>
+        </a>
+    </div>
+    <div class="flex_content">
+        <div class="flex">
+            <i class="fa-sharp fa-solid fa-graduation-cap"></i> <br>
+            <p>Tiếp nhận học sinh</p>
+            <a href="/NV/tiepNhanHS"><i class="fa-solid fa-caret-right" style="color:black"></i></a>
+        </div>
+        <div class="flex">
+            <i class="fa-solid fa-address-book"></i> <br>
+            <p>Cập nhật danh sách lớp</p>
+            <a href="/NV/capNhatLop"><i class="fa-solid fa-caret-right" style="color:black"></i></a>
+
+        </div>
+    </div>
+</section>
+
+{% else %}
+<h1>Bạn chưa đăng nhập, vui lòng đăng nhập <a href="/login">Tại đây</a></h1>
+{% endif %}
+{% endblock %}

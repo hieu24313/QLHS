@@ -1,0 +1,131 @@
+<head>
+
+    <link href="{{ url_for('static', filename='css/diem/capNhatDiem.css') }}" rel="stylesheet"/>
+<link href="{{ url_for('static', filename='css/diem/themMon.css') }}" rel="stylesheet"/>
+</head>
+
+{% extends 'layout/base.html' %}
+
+{% block content %}
+<section style="height: 650px">
+    <h1>Cập nhật môn học</h1>
+    <div class="change">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="/GV/dsMon">Danh sách môn học</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/GV/themMon">Thêm môn</a>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="update">
+        <div>
+            <select class="option">
+                <option value="Khoi">Khối</option>
+                <option value="2">10</option>
+                <option value="3">11</option>
+                <option value="4">12</option>
+            </select>
+        </div>
+        <div>
+            <select class="option">
+                <option value="Lop">Lớp</option>
+                <option value="2">A1</option>
+                <option value="3">A2</option>
+                <option value="4">A3</option>
+            </select>
+        </div>
+        <div>
+            <select class="option">
+                <option value="HK">Học kì</option>
+                <option value="2">1</option>
+                <option value="3">2</option>
+            </select>
+        </div>
+        <div>
+            <select class="option">
+                <option value="NH">Năm học</option>
+                <option value="2">1</option>
+                <option value="3">2</option>
+            </select>
+        </div>
+    </div>
+    <form>
+        <input type="search" id="search" placeholder="Nhập tên môn" name="search">
+        <span>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </span>
+    </form>
+    <div style="margin: 10px;">
+        <input type="submit" value="Lọc" class="option btn btn-success"/>
+    </div>
+    <table>
+        <!--    hàng 1-->
+        <tr>
+            <th>
+                <input type="checkbox" name="rowtoggle" class="action-rowtoggle" title="Chọn tất cả hồ sơ">
+            </th>
+            <th>STT</th>
+            <th>Tên môn</th>
+            <th>Mã môn</th>
+            <th>Thay đổi</th>
+            <th>Xóa</th>
+
+
+        </tr>
+        <!--    hàng 2-->
+        <tr>
+            <td>
+                <input type="checkbox" name="rowtoggle" class="action-rowtoggle" title="Chọn tất cả hồ sơ">
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <span><i class="fa-solid fa-pen-to-square"></i></span>
+            </td>
+            <td>
+                <span><i class="fa-solid fa-trash"></i></span>
+            </td>
+
+        </tr>
+
+        <!--    hàng 3-->
+        <tr>
+            <td>
+                <input type="checkbox" name="rowtoggle" class="action-rowtoggle" title="Chọn tất cả hồ sơ">
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <span><i class="fa-solid fa-pen-to-square"></i></span>
+            </td>
+            <td>
+                <span><i class="fa-solid fa-trash"></i></span>
+            </td>
+        </tr>
+        <!--    hàng 4-->
+        <tr>
+            <td>
+                <input type="checkbox" name="rowtoggle" class="action-rowtoggle" title="Chọn tất cả hồ sơ">
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <span><i class="fa-solid fa-pen-to-square"></i></span>
+            </td>
+            <td>
+                <span><i class="fa-solid fa-trash"></i></span>
+            </td>
+        </tr>
+    </table>
+    <div style="margin: 10px; ">
+        <input type="button" value="Lưu" class="option btn btn-success"/>
+    </div>
+</section>
+{% endblock %}

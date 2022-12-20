@@ -1,0 +1,52 @@
+/*TRANG CHU*/
+body{
+    background-image: url(/static/img/background.jpg);
+
+}
+section {
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+}
+.flex_content {
+width: 49%;
+}
+.flex_content .content {
+margin:50px;
+padding: 15px;
+
+}
+img{
+width:100%;
+height: 300px;
+}
+.content .text {
+    text-align: center;
+}
+
+.content a {
+    text-decoration:none;
+    text-align: center;
+    color: white;
+    display:block;
+    width: 400px;
+    height: 50px;
+    background-color:#335cad    ;
+    padding: 13px;
+    margin-top: 20px;
+    border-radius: 25px;
+}
+.content a i {
+    padding-top: 5px;
+}
+.content a:hover {
+    background-color: #003399;
+    color: yellow;
+
+}
+
+.fa-solid, .fas {
+    font-weight: 900;
+    float: right;
+    padding: 10px;
+}

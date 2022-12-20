@@ -1,0 +1,65 @@
+{% extends 'layout/base.html' %}
+{% block banner%}
+    <h1>Bảng điểm môn học</h1>
+{%endblock%}
+{% block content %}
+<head>
+    <link href="{{ url_for('static', filename='css/diem/bangDiem.css') }}" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet"/>
+</head>
+<section style="height: 500px">
+    <div class="back">
+        <a href="/GV">
+            <i class="fa-solid fa-backward"></i>
+        </a>
+    </div>
+
+    <form>
+        <div class="items" style="flex-grow:1">
+            <select class="option" required id="mon">
+                <option value="Mon">Môn học</option>
+                {% for m in load_mon %}
+                <option value="{{ m.id }}">{{ m.tenmon }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="items" style="flex-grow:1">
+            <label>Năm học: </label>
+            <input type="date" id="date" required>
+        </div>
+        <div class="items" style="flex-grow:1">
+            <input type="submit" value="Lọc" class="btn btn-loc"/>
+        </div>
+    </form>
+    <table>
+        <tr>
+            <th>STT</th>
+            <th>Họ tên</th>
+            <th>Lớp</th>
+            <th>TB HK1</th>
+            <th>TB HK2</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</section>
+{% endblock %}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}Education Website{% endblock %}
+    </title>
+     <link href="{{ url_for('static', filename='css/trangchu.css') }}" rel="stylesheet"/>
+
+    <script>
+</script>
+</head>
+
+{% extends 'layout/base.html' %}
+{% block banner%}
+    <h1>HỆ THỐNG QUẢN LÝ SINH VIÊN</h1>
+{%endblock%}
+{% block content %}
+<section>
+    <div class="flex_content">
+        <div class="content">
+            <div class="qlmon">
+                <a href="/GV"> GIÁO VIÊN
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+            </div>
+            <div class="qlhs">
+                <a href="/NV">NHÂN VIÊN
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="flex_content">
+            <img src="{{ url_for('static', filename='img/qlhs1.png') }}">
+    </div>
+</section>
+
+{% endblock %}

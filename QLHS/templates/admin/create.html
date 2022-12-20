@@ -1,0 +1,49 @@
+{% extends 'admin/master.html' %}
+{% block body %}
+<h1 class="text-center text-danger">ĐĂNG KÝ NGƯỜI DÙNG</h1>
+
+{% if err_msg %}
+<div class="alert alert-danger">
+    {{err_msg}}
+</div>
+{% endif %}
+<form method="post" enctype="multipart/form-data" action="/admin/create">
+    <div class="form-floating mb-3 mt-3">
+        <label for="name">Họ tên</label>
+        <input type="text" class="form-control" required id="name"
+               placeholder="Nhập tên" name="name">
+    </div>
+    <div class="form-floating mb-3 mt-3">
+        <label for="username">Tên đăng nhập</label>
+        <input type="text" class="form-control" id="username" required
+               placeholder="Nhập tên đăng nhập" name="username">
+
+    </div>
+    <div class="form-floating mt-3 mb-3">
+        <label for="password">Mật khẩu</label>
+        <input type="password" class="form-control" id="password" required
+               placeholder="Nhập mật khẩu" name="password">
+
+    </div>
+    <div class="form-floating mt-3 mb-3">
+        <label for="confirm">Xác nhận mật khẩu</label>
+        <input type="password" class="form-control" id="confirm" required
+               placeholder="Nhập xác nhận mật khẩu" name="confirm">
+    </div>
+    <div >
+        <select required id="role">
+            <option>Loại người dùng</option>
+            <option value="1">QTV</option>
+            <option value="2">GV</option>
+            <option value="3">NV</option>
+        </select>
+    </div>
+    <div class="form-floating mt-3 mb-3">
+        <label for="avatar">Ảnh đại diện</label>
+        <input type="file" class="form-control" id="avatar" name="avatar">
+    </div>
+    <div>
+        <input type="submit" value="Đăng ký" class="btn btn-danger" />
+    </div>
+</form>
+{% endblock %}

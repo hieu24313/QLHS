@@ -1,0 +1,42 @@
+
+.flex_content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 70px auto;
+    padding:10px;
+    height: 400px;
+}
+.flex_content .flex {
+    width: 23%;
+    height: 200px;
+    background-color: green;
+    margin:0px auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition-duration: 2s;
+}
+.flex i {
+    width:100%;
+    font-size: 40px;
+    padding-bottom:5px;
+}
+.flex a {
+    float:left;
+    width: 60px;
+    margin-top: 30px;
+    margin-left:10px;
+    border: 1px solid black;
+    border-radius:5px;
+    display:none;
+}
+.flex:hover {
+  transform: translateY(-8px);
+  transition: 2s;
+   background-color: lightblue;
+}
+.flex:hover>a{
+    display: block;
+}
