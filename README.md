@@ -1,3 +1,3 @@
 # QLHS
 QLHS
-Bài tập phần mềm đầu tay bằng puthon flask(CHƯA HOÀN THÀNH)
+Bài tập phần mềm đầu tay bằng python flask(CHƯA HOÀN THÀNH)
